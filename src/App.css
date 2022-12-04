@@ -1,0 +1,30 @@
+.text-center{
+  text-align: center;
+}
+.df{
+  display: flex;
+}
+.ac{
+  align-items: center;
+}
+.section {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+}
+label{
+  display: block;
+}
+input,select,textarea{
+  width: 100%;
+  border: 1px solid grey;
+  padding: 5px 7px;
+  border-radius: 4px;
+}
