@@ -1,28 +1,25 @@
 import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
+import { Card, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-const HomeComponents = () => {
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/photos")
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
-  }, []);
-
+const HomeComponents = (props) => {
+const  {id,thumbnailUrl,title,url} = props?.cardData
   return (
-    <div>
-      <div className="container">
-        {products.map((product, i) => (
-          <div key={i}>
-            <h5>{product.title}</h5>
-            <div className="w-25">
-              <img src={product.url} alt="" className="w-100" />{" "}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
+    <Col>
+      <Card>
+            <Card.Img variant="top" src={thumbnailUrl} />
+            <Card.Body>
+              <span>{id}</span>
+              <Card.Title>{title}</Card.Title>
+              <Card.Text>
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </Card.Text>
+              <Link to={url}>Link</Link>
+            </Card.Body>
+          </Card>
+    </Col>
   );
 };
 
