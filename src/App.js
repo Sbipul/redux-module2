@@ -3,7 +3,7 @@ import "./App.css";
 // import FormData from "./components/FormData/FormData";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home/Home";
-import Users from "./Pages/Users/Users";
+import Cart from "./Pages/Cart/Cart";
 import Contact from "./Pages/Contact/Contact";
 import Header from "./components/Header";
 import {Provider} from 'react-redux'
@@ -14,7 +14,7 @@ function App() {
     <Header/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/users" element={<Users />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Provider>
