@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart, removeCart } from "../redux/actionCreators/productAction";
 const ProductCard = (props) => {
-  const { id, thumbnailUrl, title, url,quantity } = props.cardData;
+  const {thumbnailUrl, title, url,quantity } = props.cardData;
   const dispatch = useDispatch();
   const { pathname } = useLocation();
   return (
