@@ -7,7 +7,7 @@ const  {id,thumbnailUrl,title,url} = props?.cardData
   return (
     <Col>
       <Card>
-            <Card.Img variant="top" src={thumbnailUrl} />
+            <Card.Img className="w-50 mx-auto" variant="top" src={thumbnailUrl} />
             <Card.Body>
               <span>{id}</span>
               <Card.Title>{title}</Card.Title>
