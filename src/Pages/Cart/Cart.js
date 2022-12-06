@@ -9,7 +9,7 @@ const Cart = () => {
         <Container>
             <Row xs={1} md={4} className="g-4">
             {
-               carts.length && carts?.map((cart,i)=><ProductCard key={i} cardData={cart}/>)
+               carts.length && carts.sort((a,b)=>a.id-b.id)?.map((cart,i)=><ProductCard key={i} cardData={cart}/>)
             }
             </Row>
         </Container>

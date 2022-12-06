@@ -6,9 +6,9 @@ export const addToCart = (data) => {
     payload: data,
   };
 };
-export const removeCart = (id) => {
+export const removeCart = (data) => {
     return{
         type:REMOVEFROMCART,
-        payload:id
+        payload:data
     }
 }

@@ -16,7 +16,7 @@ const ProductCard = (props) => {
           <Card.Title>{title?.slice(0, 15)}</Card.Title>
           <div className="d-flex align-items-center justify-content-between">
             {pathname.includes("cart") ? (
-              <Button onClick={() => dispatch(removeCart(id))}>
+              <Button onClick={() => dispatch(removeCart(props?.cardData))}>
                 Remove cart
               </Button>
             ) : (
